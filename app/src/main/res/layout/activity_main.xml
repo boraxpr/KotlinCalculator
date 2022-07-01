@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="50dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--    SCREEN AREA     -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="60">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textViewInputScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="40">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="10">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonReset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/reset"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonNegative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/negative"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonModulo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/operand_modulo"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDivide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/operand_division"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_seven"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_eight"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_nine"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonMultiply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/operand_multiply"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="10">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_four"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_five"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_six"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonMinus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/operand_minus"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="10">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_one"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_two"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_three"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAdd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/operand_addition"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="10">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonZero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/number_zero"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.75"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/decimal"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEqual"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.75"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeMinTextSize="20sp"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/operand_equal"
+                android:textSize="34sp"
+                android:visibility="visible"
+                app:rippleColor="#4AFF0000"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+

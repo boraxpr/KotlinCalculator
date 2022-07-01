@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">เครื่องคิดเลขKotlin</string>
+    <string name="number_one">๑</string>
+    <string name="number_two">๒</string>
+    <string name="number_three">๓</string>
+    <string name="number_four">๔</string>
+    <string name="number_five">๕</string>
+    <string name="number_six">๖</string>
+    <string name="number_seven">๗</string>
+    <string name="number_eight">๘</string>
+    <string name="number_nine">๙</string>
+    <string name="number_zero">๐</string>
+    <string name="operand_addition">บวก</string>
+    <string name="operand_division">หาร</string>
+    <string name="operand_minus">ลบ</string>
+    <string name="operand_multiply">คูณ</string>
+    <string name="operand_equal">เท่ากับ</string>
+    <string name="reset">เริ่มใหม่</string>
+    <string name="operand_modulo">โมดูโล</string>
+</resources>
