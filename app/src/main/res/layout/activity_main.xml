@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="16dp"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
@@ -22,8 +22,8 @@
             android:layout_weight="1"
             android:textColor="@color/white"
             android:autoSizeMinTextSize="20sp"
-            android:autoSizeMaxTextSize="50sp"
-            android:autoSizeTextType="none"
+            android:autoSizeMaxTextSize="25sp"
+            android:autoSizeTextType="uniform"
             />
 
         <TextView

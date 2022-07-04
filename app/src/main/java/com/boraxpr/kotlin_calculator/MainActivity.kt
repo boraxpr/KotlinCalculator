@@ -2,23 +2,14 @@ package com.boraxpr.kotlin_calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Debug
-import android.util.Log
-import android.view.View
-import android.view.ViewGroup
 import androidx.core.text.isDigitsOnly
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.allViews
-import androidx.core.view.iterator
-
 import com.boraxpr.kotlin_calculator.databinding.ActivityMainBinding
 import com.google.android.material.button.MaterialButton
-import java.text.NumberFormat
+import kotlin.math.ceil
+
 
 class MainActivity : AppCompatActivity() {
-    enum class Screen {
-        inputScreen, historyScreen
-    }
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 //        HIDE NAVIGATION BAR
-        window.decorView.windowInsetsController!!.hide(WindowInsetsCompat.Type.navigationBars())
+//        window.decorView.windowInsetsController!!.hide(WindowInsetsCompat.Type.navigationBars())
 
 //        GET bind views
         val button1 = binding.button1
@@ -78,11 +69,10 @@ class MainActivity : AppCompatActivity() {
         val textHistoryScreen = binding.textViewHistory
         //Calculation-related variables
         var operandA: Float? = null
-        var operandB = null
+        var operandB: Float? = null
         var operation: MaterialButton? = null
-        var temp = 0
         var continuous = 0
-        var cont_value = 0
+        var contValue : Float? = null
 
         for (button in buttonArr) {
             button.setOnClickListener {
@@ -91,9 +81,8 @@ class MainActivity : AppCompatActivity() {
                     operandA = null
                     operandB = null
                     operation = null
-                    temp = 0
                     continuous = 0
-                    cont_value = 0
+                    contValue = null
                 } //INPUTS
                 else if (button.text.isDigitsOnly()) {
                     textInputScreen.append(button.text.toString())
@@ -114,31 +103,42 @@ class MainActivity : AppCompatActivity() {
                     }
                     operation = button
                     textInputScreen.text = ""
-                }
+                } //DECIMAL
                 else if (button == buttonDecimal && !textInputScreen.text.contains(".")){
                     textInputScreen.append(button.text.toString())
+                } //CALCULATION TODO: Bug Fix After show a History, Pressing an Equal crashes the app
+                else if (button == buttonEqual){
+                    if (operandA == null && operandB == null){
+                        textInputScreen.text = ""
+                    }
+                    else {
+                        if (operandB == null && continuous == 0){
+                            operandB = textInputScreen.text.toString().toFloat()
+                            continuous = 1
+                        }
+                        else {
+                            operandA = contValue
+                        }
+                        var showA = operandA.toString()
+                        var showB = operandB.toString()
+                        //TODO:Not working properly. whole values still show decimal
+                        if (!isWhole(operandA!!)){
+                            showA = "%.3f".format(operandA)
+                        }
+                        if (!isWhole(operandB!!)){
+                            showB = "%.3f".format(operandB)
+                        }
+
+                        textHistoryScreen.text = getString(R.string.history, showA, operation!!.text, showB)
+                        //TODO:Calculations and show result on the input screen
+                    }
                 }
             }
         }
     }
-
-    //        SET inputScreen value
-//        button0.setOnClickListener{
-//            appendToInput("0")
-//        }
-//        button1.setOnClickListener{
-//            appendToInput("1")
-//        }
-//        button2.setOnClickListener{
-//            appendToInput("2")
-//        }
-//        button3.setOnClickListener{
-//            a
-//        }
-//        button4.setOnClickListener{
-//
-//        }
-
+    private fun isWhole(float: Float): Boolean {
+        return float.rem(1).equals(0.0)
+    }
 }
 
 
