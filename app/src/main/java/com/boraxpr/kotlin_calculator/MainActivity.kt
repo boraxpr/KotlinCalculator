@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
                 else if (button.text.isDigitsOnly()) {
                     textInputScreen.append(button.text.toString())
                 } //NEGATIVE
-                else if (button == buttonNegative) {
+                else if (button == buttonNegative && textInputScreen.text.isNotEmpty()) {
                     if (textInputScreen.text.startsWith("-")) {
                         textInputScreen.text = textInputScreen.text.removePrefix("-")
                     }
@@ -108,7 +108,10 @@ class MainActivity : AppCompatActivity() {
                 } //OPERATIONS
                 else if (button == buttonModulo || button == buttonDivide || button == buttonPlus
                     || button == buttonMinus || button == buttonMultiply){
-                    operandA = textInputScreen.text.toString().toFloat()
+
+                    if(textInputScreen.text.isNotEmpty()){
+                        operandA = textInputScreen.text.toString().toFloat()
+                    }
                     operation = button
                     textInputScreen.text = ""
                 }
