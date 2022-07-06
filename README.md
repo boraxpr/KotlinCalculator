@@ -1,4 +1,4 @@
 # KotlinCalculator
 An android (Kotlin) calculator <br>
 
-<img src="https://i.imgur.com/hi2dTof.gif" width="250">
+<img src="https://i.imgur.com/YkQebVA.gif" width="250">
