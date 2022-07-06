@@ -1,23 +1,23 @@
 <resources>
     <string name="app_name">Kotlin-Calculator</string>
-    <string name="operand_addition" translatable="true">&#43;</string>
-    <string name="operand_division" translatable="true">&#247;</string>
-    <string name="operand_minus" translatable="true">&#8722;</string>
-    <string name="operand_multiply" translatable="true">&#215;</string>
-    <string name="number_one">1</string>
-    <string name="number_two">2</string>
-    <string name="number_three">3</string>
-    <string name="number_four">4</string>
-    <string name="number_five">5</string>
-    <string name="number_six">6</string>
-    <string name="number_seven">7</string>
-    <string name="number_eight">8</string>
-    <string name="number_nine">9</string>
-    <string name="number_zero">0</string>
+    <string name="operand_addition" translatable="false">&#43;</string>
+    <string name="operand_division" translatable="false">&#247;</string>
+    <string name="operand_minus" translatable="false">&#8722;</string>
+    <string name="operand_multiply" translatable="false">&#215;</string>
+    <string name="number_one" translatable="false">1</string>
+    <string name="number_two" translatable="false">2</string>
+    <string name="number_three" translatable="false">3</string>
+    <string name="number_four" translatable="false">4</string>
+    <string name="number_five" translatable="false">5</string>
+    <string name="number_six" translatable="false">6</string>
+    <string name="number_seven" translatable="false">7</string>
+    <string name="number_eight" translatable="false">8</string>
+    <string name="number_nine" translatable="false">9</string>
+    <string name="number_zero" translatable="false">0</string>
     <string name="decimal" translatable="false">.</string>
-    <string name="operand_equal">&#61;</string>
-    <string name="reset">AC</string>
+    <string name="operand_equal" translatable="false">&#61;</string>
+    <string name="reset" translatable="false">AC</string>
     <string name="negative" translatable="false">&#177;</string>
-    <string name="operand_modulo">%</string>
+    <string name="operand_modulo" translatable="false">%</string>
     <string name="history" translatable="false">%1$s %2$s %3$s</string>
 </resources>
